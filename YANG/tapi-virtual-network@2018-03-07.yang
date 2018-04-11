@@ -18,40 +18,61 @@ module tapi-virtual-network {
         Source: TapiVirtualNetwork.uml
         Copyright (c) 2018 Open Networking Foundation (ONF). All rights reserved.
         License: This module is distributed under the Apache License 2.0";
+    revision 2018-03-07 {
+        description "ONF Transport API version 2.0.2
+        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.
+        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.2.md>";
+        reference "ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model
+                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.2/UML>";
+    }
     revision 2018-02-16 {
         description "ONF Transport API version 2.0.1
-        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool version .
-        <https://wiki.opennetworking.org/display/OIMT/IISOMI>
-        Changes in this revision: <https://github.com/OpenNetworkingFoundation/Snowmass-ONFOpenTransport/blob/develop/change-log.md>";
+        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.
+        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.1.md>";
         reference "ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model
-                  <https://github.com/OpenNetworkingFoundation/Snowmass-ONFOpenTransport/tree/develop/UML>";
+                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.1/UML>";
+    }
+    revision 2018-01-02 {
+        description "ONF Transport API version 2.0.0
+        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.
+        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.0.md>";
+        reference "ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model
+                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.0/UML>";
     }
     augment "/tapi-common:context" {
         uses virtual-network-context;
         description "Augments the base TAPI Context with VirtualNetworkService information";
     }
+    /*************************
+     * definitions of refrences
+     *************************/
+     grouping virtual-nw-service-ref {
+         leaf virtual-nw-service-id {
+             type leafref {
+                 path '/tapi-common:context/tapi-virtual-network:virtual-nw-service/tapi-virtual-network:uuid';
+             }
+             description "none";
+         }
+         description "none";
+     }
+     
     /***********************
     * package object-classes
     **********************/ 
         grouping virtual-network-constraint {
-            leaf src-service-end-point {
-                type leafref {
-                    path '/tapi-common:context/tapi-common:service-interface-point/tapi-common:uuid';
-                }
+            container src-service-end-point {
+                uses tapi-common:service-interface-point-ref;
                 config false;
                 description "none";
             }
-            leaf sink-service-end-point {
-                type leafref {
-                    path '/tapi-common:context/tapi-common:service-interface-point/tapi-common:uuid';
-                }
+            container sink-service-end-point {
+            	uses tapi-common:service-interface-point-ref;
                 config false;
                 description "none";
             }
-            leaf-list diversity-exclusion {
-                type leafref {
-                    path '/tapi-common:context/tapi-virtual-network:virtual-nw-service/tapi-virtual-network:vnw-constraint/tapi-virtual-network:local-id';
-                }
+            list diversity-exclusion {
+                uses virtual-nw-service-ref;
+                key 'virtual-nw-service-id';
                 config false;
                 description "none";
             }
@@ -81,10 +102,8 @@ module tapi-virtual-network {
             description "none";
         }
         grouping virtual-network-service {
-            leaf topology {
-                type leafref {
-                    path '/tapi-common:context/tapi-topology:topology/tapi-topology:uuid';
-                }
+            container topology {
+                uses tapi-topology:topology-ref;
                 config false;
                 description "none";
             }
@@ -118,10 +137,8 @@ module tapi-virtual-network {
                 At the lowest level of recursion, a FC represents a cross-connection within an NE.";
         }
         grouping virtual-network-service-end-point {
-            leaf service-interface-point {
-                type leafref {
-                    path '/tapi-common:context/tapi-common:service-interface-point/tapi-common:uuid';
-                }
+            container service-interface-point {
+            	uses tapi-common:service-interface-point-ref;
                 config false;
                 description "none";
             }
