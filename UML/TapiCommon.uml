@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenInterfaceModel_Profile="http:///schemas/OpenInterfaceModel_Profile/_5WBP4CZrEee8VYv13r5Sxg/6" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_EwCygFaYEeeYOvPfNXXwvA/23" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenInterfaceModel_Profile/_5WBP4CZrEee8VYv13r5Sxg/6 UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_5WB28CZrEee8VYv13r5Sxg http:///schemas/OpenModel_Profile/_EwCygFaYEeeYOvPfNXXwvA/23 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_EwISEFaYEeeYOvPfNXXwvA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenInterfaceModel_Profile="http:///schemas/OpenInterfaceModel_Profile/_3NKYsD78EeiIisB6uOvKFA/8" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenInterfaceModel_Profile/_3NKYsD78EeiIisB6uOvKFA/8 UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_3NPRMD78EeiIisB6uOvKFA http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
   <uml:Model xmi:id="_cOw5UDA4Eea4fKwSGMr6CA" name="TapiCommon">
     <ownedComment xmi:type="uml:Comment" xmi:id="_P74o8BBdEeiAQYjjYFbJVw" annotatedElement="_cOw5UDA4Eea4fKwSGMr6CA">
       <body>&#xD;
@@ -95,7 +95,7 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
         </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_NqC_oO_iEeWLlrwIF3w0vA" general="_xEvjkN8AEeW-BtRsuJPbqg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_O3TVoshqEeaVlemTikmRHw" name="_serviceInterfacePoint" type="_It0sYEG-EeWMO5szP8dKiA" aggregation="composite" association="_O3NPAMhqEeaVlemTikmRHw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YVSTAMhqEeaVlemTikmRHw" value="2"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YVSTAMhqEeaVlemTikmRHw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YVYZochqEeaVlemTikmRHw" value="*"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rOMpoFqtEeexvMtO2oNM9g" client="_sfccMOK0EeSq5fATALSQkQ" supplier="_JSfMgHrqEeavcODnuX7FyA" contract="_JSfMgHrqEeavcODnuX7FyA"/>
@@ -117,7 +117,11 @@ The structure of LTP supports all transport protocols including circuit and pack
             <body>Usage of layerProtocolName [>1]  in the ServiceInterfacePoint should be considered experimental</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bfKooKeTEeeBGPv_1DT5og" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bfMd0KeTEeeBGPv_1DT5og" value="*"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bfMd0KeTEeeBGPv_1DT5og" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Xu4AcIk4Eeil5oKL3Vgl-g" name="supportedLayerProtocolQualifier" type="_-eq88Ik2Eeil5oKL3Vgl-g" isReadOnly="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N1oGwJWWEei22OmXOLe8nA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_N6FI8JWWEei22OmXOLe8nA" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_S3giA-_tEeWLlrwIF3w0vA" name="_state" type="_j2GU0N78EeW-BtRsuJPbqg" aggregation="composite" association="_S3giAO_tEeWLlrwIF3w0vA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_AFxHsEwDEeewALXL7BvPYw" name="_capacity" type="_KjZXM9yKEeWXdJnxZxtFYA" aggregation="composite" association="_AFtdUEwDEeewALXL7BvPYw"/>
@@ -248,21 +252,6 @@ Layer protocol names include:&#xD;
 -	Layer 2 (L2): Carrier Grade Ethernet (ETY, ETH), MPLS-TP (MT)&#xD;
 </body>
         </ownedComment>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_o1nLwL6PEeWRz-VHgA3LJQ" name="OTSiA">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_jLq64OyrEee2fqmozVFruQ" annotatedElement="_o1nLwL6PEeWRz-VHgA3LJQ">
-            <body>Models the OTSiA layer as per ITU-T G.872 (2017) version 4</body>
-          </ownedComment>
-        </ownedLiteral>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MzHkgOyrEee2fqmozVFruQ" name="OCH">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_MzHkgeyrEee2fqmozVFruQ" annotatedElement="_MzHkgOyrEee2fqmozVFruQ">
-            <body>Models the legacy OCH layer as per ITU-T G.872</body>
-          </ownedComment>
-        </ownedLiteral>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xK8FgI5NEeeXQ5UBIdOSXw" name="OTU">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_mQ1VAOyrEee2fqmozVFruQ" annotatedElement="_xK8FgI5NEeeXQ5UBIdOSXw">
-            <body>Models the OTU layer as per ITU-T G.872</body>
-          </ownedComment>
-        </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_p_JmsL6PEeWRz-VHgA3LJQ" name="ODU">
           <ownedComment xmi:type="uml:Comment" xmi:id="_R5yG4OysEee2fqmozVFruQ" annotatedElement="_p_JmsL6PEeWRz-VHgA3LJQ">
             <body>Models the ODU layer as per ITU-T G.872</body>
@@ -273,14 +262,14 @@ Layer protocol names include:&#xD;
             <body>Models the ETH layer as per ITU-T G.8010</body>
           </ownedComment>
         </ownedLiteral>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5nFycI5NEeeXQ5UBIdOSXw" name="ETY">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_X4lnoOysEee2fqmozVFruQ" annotatedElement="_5nFycI5NEeeXQ5UBIdOSXw">
-            <body>Models the ETY layer as per ITU-T G.8010</body>
-          </ownedComment>
-        </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_p3xNoBNGEeiLUJsbV8C3vQ" name="DSR">
           <ownedComment xmi:type="uml:Comment" xmi:id="_FbqAcBNHEeiLUJsbV8C3vQ" annotatedElement="_p3xNoBNGEeiLUJsbV8C3vQ">
             <body>Models a Digital Signal of an unspecified rate. This value can be used when the intent is to respresent an generic digital layer signal without making any statement on its format or overhead (processing) capabilities.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_yWP1wIk6Eeil5oKL3Vgl-g" name="PHOTONIC_MEDIA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qNyEYIk7Eeil5oKL3Vgl-g" annotatedElement="_yWP1wIk6Eeil5oKL3Vgl-g">
+            <body>Models the OCH, OTSi, OTSiA, OTSiG, OMS, OTS and Media channels as per ITU-T G.872 (2017) version 4</body>
           </ownedComment>
         </ownedLiteral>
       </packagedElement>
@@ -530,7 +519,7 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_u_PXkT6jEeai_egNtQKqQA"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_ReBfoFs7EeexvMtO2oNM9g" name="CapacityValue">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ReBfoFs7EeexvMtO2oNM9g" name="CapacityValue" isLeaf="true">
         <ownedComment xmi:type="uml:Comment" xmi:id="_mikQgGHKEee8BtPo-u_r6A">
           <body>The Capacity (Bandwidth) values that are applicable for digital layers.</body>
         </ownedComment>
@@ -580,6 +569,8 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
             <body>Indicates that the integer CapacityValue is in Kilobit-per-second</body>
           </ownedComment>
         </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_QGV4QJqQEeid4dfn4JFJZg" name="GHz"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_SDsVwJqQEeid4dfn4JFJZg" name="MHz"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_EuZIcD6gEeai_egNtQKqQA" name="BandwidthProfileType" isLeaf="true">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PYdMgD6iEeai_egNtQKqQA" name="MEF_10.x"/>
@@ -587,7 +578,7 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_VNVVMD6iEeai_egNtQKqQA" name="RFC_2698"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YMrbMD6iEeai_egNtQKqQA" name="RFC_4115"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_-ijf4FtVEeexvMtO2oNM9g" name="TimeRange">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-ijf4FtVEeexvMtO2oNM9g" name="TimeRange" isLeaf="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_qDhdIL2OEeWdore3Cxez9g" name="endTime" type="_6iCS8O-fEeWLlrwIF3w0vA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8s_SoL2OEeWdore3Cxez9g"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8s_Sob2OEeWdore3Cxez9g" value="1"/>
@@ -596,6 +587,44 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_651S8L2OEeWdore3Cxez9g"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_65_D8L2OEeWdore3Cxez9g" value="1"/>
         </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Ay2V0F6UEeitO-Stqhyn1g" name="TimePeriod" isLeaf="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_iJ72UF6UEeitO-Stqhyn1g" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_m-w3QF6UEeitO-Stqhyn1g" name="unit" type="_Hd2OMF6UEeitO-Stqhyn1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_Hd2OMF6UEeitO-Stqhyn1g" name="TimeUnit" isLeaf="true">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PRjbEF6UEeitO-Stqhyn1g" name="YEARS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OaZJkF6UEeitO-Stqhyn1g" name="MONTHS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MrrlAF6UEeitO-Stqhyn1g" name="DAYS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LqMS0F6UEeitO-Stqhyn1g" name="HOURS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Wi4ToF6UEeitO-Stqhyn1g" name="MINUTES"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XY4ukF6UEeitO-Stqhyn1g" name="SECONDS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Y-IOEF6UEeitO-Stqhyn1g" name="MILLISECONDS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bG__EF6UEeitO-Stqhyn1g" name="MICROSECONDS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Au1w0F6aEeitO-Stqhyn1g" name="NANOSECONDS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ByTY8F6aEeitO-Stqhyn1g" name="PICOSECONDS"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__aY_AF6cEeitO-Stqhyn1g" name="TimeInterval" isLeaf="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eNe_IF6lEeitO-Stqhyn1g" name="period" type="_Ay2V0F6UEeitO-Stqhyn1g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fiUEEF6lEeitO-Stqhyn1g" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fiaKsF6lEeitO-Stqhyn1g" value="5"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_-eq88Ik2Eeil5oKL3Vgl-g" name="LayerProtocolQualifier">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0n5PoIk3Eeil5oKL3Vgl-g" annotatedElement="_-eq88Ik2Eeil5oKL3Vgl-g">
+          <body>This enumeration is used to qualify the sub-layers (if applicable) for a specific LayerProtocol.&#xD;
+This extensible enumeration is intentionally empty in the common module and will be augmented with layer-specific values in the respective technology-specific modules.&#xD;
+Examples:&#xD;
+- LayerProtocolName := OPTICAL_DATA_UNIT&#xD;
+   LayerProtocolQualifier := &quot;ODU_FLEX&quot;, &quot;ODU_0&quot;, &quot;ODU_1&quot;, &quot;ODU_2&quot;, &quot;ODU_2E&quot;, &quot;ODU_3&quot;, &quot;ODU_4&quot;&quot;, &quot;ODU_CBR&quot;&quot;, &quot;ODU_GFP&quot;&quot;, &quot;ODU_GFP_HAO&quot;, etc&#xD;
+- LayerProtocolName := DIGITAL_SIGNAL_RATE&#xD;
+   LayerProtocolQualifier := &quot;GBE&quot;, &quot;10_GBE_WAN&quot;, &quot;10_GBE_LAN&quot;, &quot;100_GBE&quot;, &quot;FC_100&quot;, &quot;FC_200&quot;, &quot;FC_400&quot;, &quot;FC_800&quot;, &quot;FC_1200&quot;, &quot;FC_1600&quot;, &quot;FC_3200&quot;, &quot;STM_1&quot;, &quot;STM_4&quot;, &quot;STM_16&quot;, &quot;STM_64&quot;, &quot;STM_256&quot;, &quot;OC_3&quot;, &quot;OC_12&quot;, &quot;OC_48&quot;, &quot;OC_192&quot;, &quot;OC_768&quot;, &quot;OTU_1&quot;, &quot;OTU_2&quot;, &quot;OTU_2E&quot;, &quot;OTU_3&quot;, &quot;OTU_4&quot;, &quot;GPON&quot;, &quot;XGPON&quot;, &quot;IB_SDR&quot;, &quot;IB_DDR&quot;, &quot;IB_QDR&quot;, &quot;SBCON_ESCON&quot;, &quot;DVB_ASI&quot;, &quot;SDI&quot;, &quot;SDI_1G5&quot;, &quot;SDI_3G&quot;, etc&#xD;
+- LayerProtocolName := PHOTONIC_MEDIA&#xD;
+   LayerProtocolQualifier := OCH, OTSi, OTSiA, NMC, NMCA, SMC, SMCA, OMS, OTS&#xD;
+</body>
+        </ownedComment>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FhzwMHrqEeavcODnuX7FyA" name="Interfaces">
@@ -621,28 +650,28 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_tr-BwBMeEee0L_IMWjydgQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0qZGAFqnEeexvMtO2oNM9g" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qZGAVqnEeexvMtO2oNM9g" key="Version" value="0.2.11"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qZtEFqnEeexvMtO2oNM9g" key="Comment" value="«LifecycleAggregate» stereotype added"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qZtEVqnEeexvMtO2oNM9g" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qZtElqnEeexvMtO2oNM9g" key="Date" value="2017-06-21"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qZtE1qnEeexvMtO2oNM9g" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TyO_YGm1EeiLh_06MH5Rjg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TyO_YWm1EeiLh_06MH5Rjg" key="Version" value="0.2.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TyO_Ymm1EeiLh_06MH5Rjg" key="Comment" value="New stereotype OpenModelStatement added. It contains the generic information of the model and extends the Metaclass &quot;Model&quot;."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TyO_Y2m1EeiLh_06MH5Rjg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TyO_ZGm1EeiLh_06MH5Rjg" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TyO_ZWm1EeiLh_06MH5Rjg" key="Author" value="IISOMI"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tr-BwRMeEee0L_IMWjydgQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_EwISEFaYEeeYOvPfNXXwvA"/>
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3o0p0BhrEeewCs0lkpWskw">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0qw5cFqnEeexvMtO2oNM9g" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qw5cVqnEeexvMtO2oNM9g" key="Version" value="0.0.7"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qw5clqnEeexvMtO2oNM9g" key="Comment" value="name property of the «RootElement» stereotype made mandatory.&#xD;&#xA;&#xD;&#xA;Editorial change:&#xD;&#xA;Imported the required metaclasses via “Element Import”."/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qw5c1qnEeexvMtO2oNM9g" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qw5dFqnEeexvMtO2oNM9g" key="Date" value="2017-04-21"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0qw5dVqnEeexvMtO2oNM9g" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TytghGm1EeiLh_06MH5Rjg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TytghWm1EeiLh_06MH5Rjg" key="Version" value="0.0.9"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Tytghmm1EeiLh_06MH5Rjg" key="Comment" value="BITS encoding and bitsDefinition property added."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Tytgh2m1EeiLh_06MH5Rjg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TytgiGm1EeiLh_06MH5Rjg" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TytgiWm1EeiLh_06MH5Rjg" key="Author" value="IISOMI"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3sheEBhrEeewCs0lkpWskw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_5WB28CZrEee8VYv13r5Sxg"/>
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_3NPRMD78EeiIisB6uOvKFA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_UbM6ILbyEeaufdfMFhfy_A"/>
     </profileApplication>
@@ -776,12 +805,21 @@ Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
   <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_7oAQQqg2EeeAVfY3jqnvAA" base_Property="_7n4Ucqg2EeeAVfY3jqnvAA"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_7oAQQ6g2EeeAVfY3jqnvAA" base_StructuralFeature="_7n4Udqg2EeeAVfY3jqnvAA"/>
   <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_7oAQRKg2EeeAVfY3jqnvAA" base_Property="_7n4Udqg2EeeAVfY3jqnvAA"/>
-  <OpenModel_Profile:Preliminary xmi:id="_QoZCYOyqEee2fqmozVFruQ" base_Element="_2wdyENnjEeWIOYiRCk5bbQ"/>
-  <OpenModel_Profile:Preliminary xmi:id="_UBiIcOyqEee2fqmozVFruQ" base_Element="_NMt2sKeTEeeBGPv_1DT5og"/>
   <OpenModel_Profile:Experimental xmi:id="_YY38IOyqEee2fqmozVFruQ" base_Element="_7n4Ucqg2EeeAVfY3jqnvAA"/>
   <OpenModel_Profile:Experimental xmi:id="_aKnmkOyqEee2fqmozVFruQ" base_Element="_7n4Udqg2EeeAVfY3jqnvAA"/>
   <OpenModel_Profile:Experimental xmi:id="_jLwP4OyqEee2fqmozVFruQ" base_Element="_pGsZEN5qEeWd9KDn6x5Skg"/>
   <OpenModel_Profile:Experimental xmi:id="_JTDxgO_1Eee2fqmozVFruQ" base_Element="_adPI0NnqEeWIOYiRCk5bbQ"/>
-  <OpenModel_Profile:Experimental xmi:id="_K8qzoO_1Eee2fqmozVFruQ" base_Element="_Ydx2sNnjEeWIOYiRCk5bbQ"/>
   <OpenModel_Profile:Experimental xmi:id="_MvTO4O_1Eee2fqmozVFruQ" base_Element="_7n4UcKg2EeeAVfY3jqnvAA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_iJ72UV6UEeitO-Stqhyn1g" base_Property="_iJ72UF6UEeitO-Stqhyn1g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_iKB88F6UEeitO-Stqhyn1g" base_StructuralFeature="_iJ72UF6UEeitO-Stqhyn1g"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_m-294F6UEeitO-Stqhyn1g" base_Property="_m-w3QF6UEeitO-Stqhyn1g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_m-9EgF6UEeitO-Stqhyn1g" base_StructuralFeature="_m-w3QF6UEeitO-Stqhyn1g"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_eNe_IV6lEeitO-Stqhyn1g" base_Property="_eNe_IF6lEeitO-Stqhyn1g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_eNfmMF6lEeitO-Stqhyn1g" base_StructuralFeature="_eNe_IF6lEeitO-Stqhyn1g"/>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_TyKG4Gm1EeiLh_06MH5Rjg" base_Model="_cOw5UDA4Eea4fKwSGMr6CA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Xu-HEIk4Eeil5oKL3Vgl-g" base_StructuralFeature="_Xu4AcIk4Eeil5oKL3Vgl-g"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_Xu-HEYk4Eeil5oKL3Vgl-g" base_Property="_Xu4AcIk4Eeil5oKL3Vgl-g"/>
+  <OpenModel_Profile:Experimental xmi:id="_aTAKEIk4Eeil5oKL3Vgl-g" base_Element="_-eq88Ik2Eeil5oKL3Vgl-g"/>
+  <OpenModel_Profile:Experimental xmi:id="_lnBfMIk8Eeil5oKL3Vgl-g" base_Element="_i92HIL6PEeWRz-VHgA3LJQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_sghtoIk8Eeil5oKL3Vgl-g" base_Element="_2wdyENnjEeWIOYiRCk5bbQ"/>
 </xmi:XMI>
